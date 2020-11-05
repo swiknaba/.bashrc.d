@@ -9,11 +9,14 @@ cd ~/ && git clone https://github.com/swiknaba/.bashrc.d.git
 Your `~/.bash_profile` should only contain the following:
 
 ```bash
+#!/bash
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-for file in $(find ~/.bashrc.d -name '*.bashrc');
+shopt -s globstar nullglob
+for file in ~/.bashrc.d/**/*.bashrc
 do
-source "$file"
+  source "$file"
 done
 ```
 
@@ -23,3 +26,9 @@ Ensure to set the correct permission level:
 chmod -R 700 ~/.bashrc.d
 find ~/.bashrc.d -name '*.bashrc' | xargs chmod +x
 ```
+
+As of 2020, Apple still ships macOS with Bash version 3.
+
+Above-mentioned script (`shopt`) was only introduced in Bash 4.
+
+Best, if you upgrade to Bash >= 5.
