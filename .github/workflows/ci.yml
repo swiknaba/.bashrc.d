@@ -25,3 +25,5 @@ jobs:
       # Lint bash scripts
       - name: Shell Linter
         uses: azohra/shell-linter@v0.4.0
+        with:
+          path: "**/*.bashrc"
