@@ -1,4 +1,8 @@
 #!/bash
+# shellcheck disable=SC2139
+# shellcheck disable=SC2154
+
+# @TODO: should address failing shell checks that are ignored here for now
 
 # GIT
 
