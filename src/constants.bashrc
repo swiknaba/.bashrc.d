@@ -14,5 +14,3 @@ export BUNDLER_EDITOR=atom
 HISTCONTROL=ignoredups
 
 export GPG_TTY=$(tty)
-
-! while foo # testing ci
