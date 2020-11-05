@@ -7,10 +7,12 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # set default terminal-editor to nano
 export EDITOR=nano
-export VISUAL="$EDITOR"
+VISUAL="$EDITOR"
+export VISUAL
 export BUNDLER_EDITOR=atom
 
 # ignore consecutive duplicates when running `history` in bash
 HISTCONTROL=ignoredups
 
-export GPG_TTY=$(tty)
+GPG_TTY=$(tty)
+export GPG_TTY
