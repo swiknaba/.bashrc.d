@@ -5,4 +5,5 @@
 # shellcheck source=/dev/null
 . "$HOME"/.asdf/asdf.sh
 
+# shellcheck source=/dev/null
 . "$HOME"/.asdf/completions/asdf.bash
