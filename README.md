@@ -11,7 +11,7 @@ cd ~/ && git clone https://github.com/swiknaba/.bashrc.d.git
 Your `~/.bash_profile` should only contain the following:
 
 ```bash
-#!/bash
+#! bin/bash
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

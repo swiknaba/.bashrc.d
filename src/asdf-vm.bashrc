@@ -1,4 +1,4 @@
-#!/bash
+#! bin/bash
 
 # https://github.com/asdf-vm/asdf
 
