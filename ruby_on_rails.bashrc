@@ -1,3 +1,5 @@
+#!/bash
+
 # RUBY ON RAILS
 
 alias be='bundle exec '

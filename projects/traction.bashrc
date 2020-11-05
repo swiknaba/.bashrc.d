@@ -1,3 +1,5 @@
+#!/bash
+
 # TRACTION
 
 ## RYDES

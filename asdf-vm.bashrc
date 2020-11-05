@@ -1,3 +1,5 @@
+#!/bash
+
 # https://github.com/asdf-vm/asdf
 
 . $HOME/.asdf/asdf.sh

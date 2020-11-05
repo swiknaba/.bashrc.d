@@ -1,3 +1,5 @@
+#!/bash
+
 # GIT
 
 alias git_clean="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d && git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done && git_clean_tags"

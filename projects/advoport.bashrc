@@ -1,3 +1,5 @@
+#!/bash
+
 # ADVOPORT
 
 alias sshadvoport=' cx ssh -s advoport -e production antelope'
