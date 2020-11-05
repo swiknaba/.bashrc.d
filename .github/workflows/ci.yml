@@ -26,5 +26,4 @@ jobs:
       - name: Shell Linter
         uses: azohra/shell-linter@v0.4.0
         with:
-          path: "src/**/*.bashrc"
-          path: "src/*.bashrc"
+          path: "src/*.bashrc, src/**/*.bashrc"
