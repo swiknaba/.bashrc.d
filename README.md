@@ -13,6 +13,7 @@ Your `~/.bash_profile` should only contain the following:
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# https://github.com/koalaman/shellcheck/wiki/SC2044
 shopt -s globstar nullglob
 for file in ~/.bashrc.d/**/*.bashrc
 do
