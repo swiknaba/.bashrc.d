@@ -1,5 +1,7 @@
 # `bash_profile` organizer
 
+![Shell Linter](https://github.com/swiknaba/.bashrc.d/workflows/CI/badge.svg)
+
 clone this repo to `~/` as `.bashrc.d`. Use this command:
 
 ```shell
