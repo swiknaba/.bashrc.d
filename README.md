@@ -1,9 +1,9 @@
 # `bash_profile` organizer
 
-clone this repo to `~/` as `.bashrc.d`; i.e. this readme will be at:
+clone this repo to `~/` as `.bashrc.d`. Use this command:
 
 ```shell
-~/.bashrc.d/README.md
+cd ~/ && git clone https://github.com/swiknaba/.bashrc.d.git
 ```
 
 Your `~/.bash_profile` should only contain the following:
@@ -11,7 +11,7 @@ Your `~/.bash_profile` should only contain the following:
 ```bash
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-for file in ~/.bashrc.d/**/*.bashrc;
+for file in $(find ~/.bashrc.d -name '*.bashrc');
 do
 source "$file"
 done
