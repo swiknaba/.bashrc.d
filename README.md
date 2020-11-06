@@ -1,4 +1,5 @@
-# `bash_profile` organizer
+# An Organized Bash Profile
+## How to install
 
 ![Shell Linter](https://github.com/swiknaba/.bashrc.d/workflows/CI/badge.svg)
 
@@ -30,8 +31,15 @@ chmod -R 700 ~/.bashrc.d
 find ~/.bashrc.d/src -name '*.bashrc' | xargs chmod +x
 ```
 
+## Notes
+###  Bash version on macOS
 As of 2020, Apple still ships macOS with Bash version 3.
 
 Above-mentioned script (`shopt`) was only introduced in Bash 4.
 
 Best, if you upgrade to Bash >= 5.
+
+### Bashrc vs. BashProfile
+> This means that .bash_profile is great for commands that should run only once and .bashrc for commands that should run every time you start a new shell.
+
+https://github.com/thoughtbot/til/blob/master/bash/bash_profile_vs_bashrc.md
