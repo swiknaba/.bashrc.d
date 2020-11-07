@@ -1,7 +1,7 @@
 # An Organized Bash Profile
 ## How to install
 
-![Shell Linter](https://github.com/swiknaba/.bashrc.d/workflows/CI/badge.svg)
+![Shell Lint](https://github.com/swiknaba/.bashrc.d/workflows/ShellLint/badge.svg)
 
 clone this repo to `~/` as `.bashrc.d`. Use this command:
 
