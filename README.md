@@ -1,7 +1,8 @@
 # An Organized Bash Profile
-## How to install
 
 ![Shell Lint](https://github.com/swiknaba/.bashrc.d/workflows/ShellLint/badge.svg)
+
+## How to install
 
 clone this repo to `~/` as `.bashrc.d`. Use this command:
 
