@@ -2,6 +2,9 @@
 
 ![Shell Lint](https://github.com/swiknaba/.bashrc.d/workflows/ShellLint/badge.svg)
 
+## Publications
+https://dev.to/swiknaba/how-to-organize-your-bash-profile-20eb
+
 ## How to install
 
 clone this repo to `~/` as `.bashrc.d`. Use this command:
