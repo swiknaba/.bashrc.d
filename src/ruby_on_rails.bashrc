@@ -10,5 +10,6 @@ alias bi='bundle install -j $(getconf _NPROCESSORS_ONLN) '
 alias migrate_all='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
 alias bers='bundle exec rspec '
 
+alias becop="bundle exec rubocop "
 # run rubocop on not yet commited files only
-alias cop_new_files="git add -N . && git diff --name-only | xargs rubocop"
+alias becop_new="git add -N . && git diff --name-only | xargs bundle exec rubocop"
