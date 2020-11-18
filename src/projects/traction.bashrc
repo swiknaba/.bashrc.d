@@ -21,3 +21,7 @@ alias sshabp='cx --profile LIH ssh -s abp2 -e production kangaroo'
 ## Infohub
 alias sshinfohubstaging='heroku run rails c --app=infohub-staging'
 alias sshinfohub='heroku run rails c --app=infohub-production'
+
+## DiscountPass
+alias sshdiscountpass='heroku run rails c --app=discount-pass-production'
+alias sshdiscountpassstaging='heroku run rails c --app=discount-pass-staging'
