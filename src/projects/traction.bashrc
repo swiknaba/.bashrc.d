@@ -8,7 +8,7 @@ alias sshrydesstaging='cx --profile LIH ssh -s rydes-api -e staging alpaca'
 alias sshrydesmobility="cx ssh -s 'mobility-budget-api' -e production bobcat"
 
 ## COMPENSAID
-alias sshcompensaid='cx --profile LIH ssh -s compensaid -e production flamingo'
+alias sshcompensaid='cx --profile LIH ssh -s compensaid -e production hare'
 alias sshcompensaidstaging='cx --profile LIH ssh -s compensaid -e staging dinosaur'
 
 ## Flightvoucher
