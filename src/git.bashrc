@@ -19,3 +19,4 @@ alias rebase_master='git pull --rebase origin master'
 alias commit='git add . && git commit -m '
 alias amend='git add . && git commit --amend '
 alias gp='git push '
+alias reset_file='git checkout origin/master ' # [filename]
