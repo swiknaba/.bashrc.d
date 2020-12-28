@@ -16,3 +16,7 @@ HISTCONTROL=ignoredups
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# enable GO modules for bufallow to allow working outside GOPATH
+# see: https://gobuffalo.io/en/docs/gomods
+export GO111MODULE=on

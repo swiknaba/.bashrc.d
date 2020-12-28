@@ -39,5 +39,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Golang
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/Sites/
+export GOPATH=$HOME/Sites/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
