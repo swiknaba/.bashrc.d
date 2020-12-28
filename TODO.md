@@ -62,6 +62,7 @@ currently on the big pc:
 ## Compensaid
 127.0.0.1 compensaid.test
 127.0.0.1 api.compensaid.test
+127.0.0.1 austrian.compensaid.test
 127.0.0.1 lufthansa.compensaid.test
 127.0.0.1 brusselsairlines.compensaid.test
 127.0.0.1 airgo.compensaid.test
