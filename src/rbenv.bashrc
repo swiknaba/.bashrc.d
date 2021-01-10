@@ -3,6 +3,7 @@
 # RBENV
 # https://github.com/rbenv/rbenv
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# https://github.com/koalaman/shellcheck/wiki/SC2230
+if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias rbenv_update="cd ~/.rbenv/plugins/ruby-build && git pull"
