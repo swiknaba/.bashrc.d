@@ -24,6 +24,13 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH="/usr/local/opt/libpcap/bin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/openldap/bin:$PATH"
+export PATH="/usr/local/opt/openldap/sbin:$PATH"
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+export PATH="/usr/local/opt/expat/bin:$PATH"
 
 # PostgreSQL
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
