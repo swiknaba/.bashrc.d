@@ -23,7 +23,8 @@ export GO111MODULE=on
 
 # RUBY
 ## this may interfere with building old versions of Ruby (e.g <2.4) that use OpenSSL <1.1.
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS
 
 # Guile
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
