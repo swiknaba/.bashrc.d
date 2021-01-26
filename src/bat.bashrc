@@ -4,5 +4,6 @@
 
 alias taillogdev='tail -f log/development.log | bat --paging=never -l log'
 alias taillogtest='tail -f log/test.log | bat --paging=never -l log'
+alias cat='bat --paging=never'
 
 export BAT_THEME="ansi-light"
