@@ -9,7 +9,7 @@ then
     echo "You already have a VSCode settings file."
 else
     echo "creating VSCode settings file.."
-    $(touch "$FILE")
+    touch "$FILE"
     echo "done."
 fi
 
@@ -21,8 +21,8 @@ FILE="$DIR/settings.json"
 BACKUP="$DIR/settings.json.backup"
 DEFAULT_FILE="vscode/settings.json"
 
-$(touch "$BACKUP")
-$(cp "$BACKUP" "$FILE")
-$(cp "$DEFAULT_FILE" "$FILE")
+touch "$BACKUP"
+cp "$BACKUP" "$FILE"
+cp "$DEFAULT_FILE" "$FILE"
 
 echo "Find a backup of your old settings file in '$BACKUP'"
