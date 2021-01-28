@@ -2,12 +2,6 @@
 
 # PATHS
 
-export NVM_DIR="$HOME/.nvm"
-# shellcheck source=/dev/null
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# shellcheck source=/dev/null
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # binaries with superuser (root) privileges
 export PATH="/usr/local/sbin:$PATH"
 
@@ -21,7 +15,6 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/libressl/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH="/usr/local/opt/libpcap/bin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
@@ -31,6 +24,7 @@ export PATH="/usr/local/opt/openldap/sbin:$PATH"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
 export PATH="/usr/local/opt/expat/bin:$PATH"
+export PATH="/usr/local/opt/node@15/bin:$PATH"
 
 # PostgreSQL
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
