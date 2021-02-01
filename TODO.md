@@ -62,13 +62,23 @@ currently on the big pc:
 ## Compensaid
 127.0.0.1 compensaid.test
 127.0.0.1 api.compensaid.test
-127.0.0.1 austrian.compensaid.test
-127.0.0.1 lufthansa.compensaid.test
-127.0.0.1 brusselsairlines.compensaid.test
+127.0.0.1 airdolomiti.compensaid.test
 127.0.0.1 airgo.compensaid.test
-127.0.0.1 swiss.compensaid.test
+127.0.0.1 austrian.compensaid.test
+127.0.0.1 brusselsairlines.compensaid.test
 127.0.0.1 eurowings.compensaid.test
+127.0.0.1 lufthansa.compensaid.test
+127.0.0.1 swiss.compensaid.test
 127.0.0.1 green-traveller.compensaid.test
+
+127.0.0.1 en.compensaid.test
+127.0.0.1 xgo.compensaid.test
+127.0.0.1 os.compensaid.test
+127.0.0.1 sn.compensaid.test
+127.0.0.1 ew.compensaid.test
+127.0.0.1 lh.compensaid.test
+127.0.0.1 lx.compensaid.test
+127.0.0.1 gt.compensaid.test
 
 ## Discount Pass
 127.0.0.1 milesandmore-discountpass.test
