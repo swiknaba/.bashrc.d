@@ -80,6 +80,9 @@ currently on the big pc:
 127.0.0.1 lx.compensaid.test
 127.0.0.1 gt.compensaid.test
 
+## Offset-API
+127.0.0.1 api.offset-api.test
+
 ## Discount Pass
 127.0.0.1 milesandmore-discountpass.test
 127.0.0.1 api.milesandmore-discountpass.test
