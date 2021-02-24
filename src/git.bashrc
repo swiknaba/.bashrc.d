@@ -12,6 +12,8 @@ alias git_clean1="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | x
 alias git_clean2="git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
 alias git_clean_tags="git tag -l | xargs git tag -d && git fetch --tags "
 
+alias gbc="git --no-pager branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+
 alias git_all=' git checkout master && git fetch --all && git pull --all --ff-only && git fetch --tags && git_clean '
 
 ## frequently used commands
