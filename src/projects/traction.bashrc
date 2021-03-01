@@ -29,3 +29,7 @@ alias sshoffsetapi='heroku run rails c --app=offset-api-production'
 ## DiscountPass
 alias sshdiscountpass='heroku run rails c --app=discount-pass-production'
 alias sshdiscountpassstaging='heroku run rails c --app=discount-pass-staging'
+
+## for some projects, we use hardsource webpack plugin, which has a bug
+## that causes a corrupt cache state, see: https://github.com/mzgoddard/hard-source-webpack-plugin/issues/416
+alias hscc='rm -rf node_modules/.cache/hard-source/'
