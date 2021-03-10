@@ -62,6 +62,8 @@ currently on the big pc:
 ## Compensaid
 127.0.0.1 compensaid.test
 127.0.0.1 api.compensaid.test
+127.0.0.1 cdn.compensaid.test
+127.0.0.1 docs.compensaid.test
 127.0.0.1 airdolomiti.compensaid.test
 127.0.0.1 airgo.compensaid.test
 127.0.0.1 austrian.compensaid.test
@@ -82,6 +84,7 @@ currently on the big pc:
 
 ## Offset-API
 127.0.0.1 api.offset-api.test
+127.0.0.1 docs.offset-api.test
 
 ## Discount Pass
 127.0.0.1 milesandmore-discountpass.test
