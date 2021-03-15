@@ -24,7 +24,7 @@ kraken_set_pump_speed () {
   then
     CURRENT_PUMP_DUTY="$(liquidctl status | grep duty | awk '{print $4}')"
     TARGET_PUMP_SPEED=${1:-70} # first argument or 70
-    if [[ $CURRENT_PUMP_DUTY != $TARGET_PUMP_SPEED ]]
+    if [[ $CURRENT_PUMP_DUTY != "$TARGET_PUMP_SPEED" ]]
     then
       eval "(liquidctl set pump speed $TARGET_PUMP_SPEED)"
     fi
