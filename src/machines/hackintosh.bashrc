@@ -12,7 +12,9 @@
 #   liquidctl set pump speed 75
 
 #
-# by default, sets the pump speed to 50%, which is roughly 1.600 rpm (stock default is 20% / 880 rpm)
+# by default, sets the pump speed to 50%, which is roughly 1.600 rpm
+#   -> stock settings: 20% / 880 rpm
+#   -> max settings: 100% / 2800 rpm
 # optionally, pass any desired pump speed as first argument:
 # > kraken_set_pump_speed 75
 #
