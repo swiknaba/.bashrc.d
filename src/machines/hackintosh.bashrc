@@ -12,7 +12,7 @@
 #   liquidctl set pump speed 75
 
 #
-# by default, sets the pump speed to 70%
+# by default, sets the pump speed to 50%, which is roughly 1.600 rpm (stock default is 20% / 880 rpm)
 # optionally, pass any desired pump speed as first argument:
 # > kraken_set_pump_speed 75
 #
@@ -23,7 +23,7 @@ kraken_set_pump_speed () {
   if command -v liquidctl > /dev/null
   then
     CURRENT_PUMP_DUTY="$(liquidctl status | grep duty | awk '{print $4}')"
-    TARGET_PUMP_SPEED=${1:-70} # first argument or 70
+    TARGET_PUMP_SPEED=${1:-50} # first argument or 50
     if [[ $CURRENT_PUMP_DUTY != "$TARGET_PUMP_SPEED" ]]
     then
       eval "(liquidctl set pump speed ${TARGET_PUMP_SPEED})"
