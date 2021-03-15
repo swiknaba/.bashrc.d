@@ -32,6 +32,16 @@ chmod -R 700 ~/.bashrc.d
 find ~/.bashrc.d/src -name '*.bashrc' | xargs chmod +x
 ```
 
+## Register launchd agents
+To install any of the custom launchd agents (found in `/launchd_agents/*.plist`), simply run:
+
+```shell
+launchd_agent_install X
+```
+
+where `X` is the name of the agent, e.g. `kraken`.
+
+
 ## Notes
 ### Use original command which is aliased
 Assume you have an alias like `alias ls='lsd'`, thus you will execute `lsd` when calling `ls`.
