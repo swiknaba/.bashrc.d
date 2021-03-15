@@ -26,7 +26,7 @@ kraken_set_pump_speed () {
     TARGET_PUMP_SPEED=${1:-70} # first argument or 70
     if [[ $CURRENT_PUMP_DUTY != "$TARGET_PUMP_SPEED" ]]
     then
-      eval "(liquidctl set pump speed "${TARGET_PUMP_SPEED}")"
+      eval "(liquidctl set pump speed ${TARGET_PUMP_SPEED})"
     fi
     # we want to see the pump speed of the new duty level
     # which takes a while, hence we have to wait a few seconds
