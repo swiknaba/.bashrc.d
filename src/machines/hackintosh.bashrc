@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Kraken NZXT X63
 ### pump control
 # tool: liquidctl
