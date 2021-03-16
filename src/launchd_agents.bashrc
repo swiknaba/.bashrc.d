@@ -16,6 +16,11 @@
 # link the launchd agent
 #   > plutil -lint ~/Library/LaunchAgents/kraken.plist
 
+launchd_agent_lint () {
+  AGENT_NAME=$1
+  plutil -lint ~/.bashrc.d/launchd_agents/$AGENT_NAME.plist
+}
+
 launchd_agent_install () {
   AGENT_NAME=$1
   if [[ $AGENT_NAME != '' ]]
