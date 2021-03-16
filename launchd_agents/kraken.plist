@@ -4,11 +4,9 @@
 <dict>
     <key>Label</key>
     <string>com.user.kraken.liquidctl</string>
-    <key>Program</key>
-    <string>/usr/local/bin/bash</string>
     <key>ProgramArguments</key>
     <array>
-        <string>bash</string>
+        <string>/bin/sh</string>
         <string>/Users/ry/.bashrc.d/launchd_scripts/kraken.sh</string>
     </array>
     <key>RunAtLoad</key>
