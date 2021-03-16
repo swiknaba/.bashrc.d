@@ -30,7 +30,7 @@ launchd_agent_install () {
     # copy launch agent from bashrc.d directoy
     cp "$HOME/.bashrc.d/launchd_agents/$AGENT_NAME.plist" "${HOME}/Library/LaunchAgents/${AGENT_NAME}.plist"
     # give correct permissions to plist
-    eval "$(sudo chown root:staff "${HOME}"/Library/LaunchAgents/"${AGENT_NAME}".plist)"
+    eval "$(sudo chown root:wheel "${HOME}"/Library/LaunchAgents/"${AGENT_NAME}".plist)"
     # give correct permissions to script
     eval "$(chmod a+x ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
     # (re)start the new agent
@@ -38,7 +38,7 @@ launchd_agent_install () {
     then
       eval "$(launchctl unload -w ~/Library/LaunchAgents/"${AGENT_NAME}".plist)"
     fi
-    eval "$(launchctl load -w ~/Library/LaunchAgents/"${AGENT_NAME}".plist)"
+    eval "$(launchctl load -Fw ~/Library/LaunchAgents/"${AGENT_NAME}".plist)"
   else
     echo "Expected agent name to be passed as first argument, got '$AGENT_NAME'"
   fi
