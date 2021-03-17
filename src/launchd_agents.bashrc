@@ -18,7 +18,7 @@
 
 launchd_agent_lint () {
   AGENT_NAME=$1
-  plutil -lint ~/.bashrc.d/launchd_agents/$AGENT_NAME.plist
+  plutil -lint ~/.bashrc.d/launchd_agents/"$AGENT_NAME".plist
 }
 
 launchd_agent_install () {
@@ -34,7 +34,7 @@ launchd_agent_install () {
     # give correct permissions to script
     eval "$(chmod a+x ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
     # (re)start the new agent
-    if launchctl list | grep $AGENT_NAME > /dev/null
+    if launchctl list | grep "$AGENT_NAME" > /dev/null
     then
       eval "$(launchctl unload -w ~/Library/LaunchAgents/"${AGENT_NAME}".plist)"
     fi
