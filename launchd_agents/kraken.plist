@@ -6,7 +6,6 @@
     <string>com.user.kraken.liquidctl</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/sh</string>
         <string>/Users/ry/.bashrc.d/launchd_scripts/kraken.sh</string>
     </array>
     <key>RunAtLoad</key>
