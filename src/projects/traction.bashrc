@@ -9,7 +9,7 @@ alias sshrydesmobility="cx ssh -s 'mobility-budget-api' -e production bobcat"
 
 ## COMPENSAID
 alias sshcompensaid='cx --profile LIH ssh -s compensaid -e production hare'
-alias sshcompensaidstaging='cx --profile LIH ssh -s compensaid -e staging dinosaur'
+alias sshcompensaidstaging='cx --profile LIH ssh -s compensaid -e staging crayfish'
 
 ## Flightvoucher
 alias sshflightvoucher='commandIsDisabled sites && cd traction/corona && export KUBECONFIG="./k8s/kubeconfig.yml:./kubeconfig.yml" && ./bin/lhk8s console flightvoucher-production'
