@@ -23,8 +23,8 @@ alias sshinfohubstaging='heroku run rails c --app=infohub-staging'
 alias sshinfohub='heroku run rails c --app=infohub-production'
 
 ## Offset-API
-alias sshoffsetapistaging='heroku run rails c --app=offset-api-staging'
-alias sshoffsetapi='heroku run rails c --app=offset-api-production'
+alias sshoffsetapistaging='heroku run bash --app=offset-api-staging'
+alias sshoffsetapi='heroku run bash --app=offset-api-production'
 
 ## DiscountPass
 alias sshdiscountpass='heroku run rails c --app=discount-pass-production'
