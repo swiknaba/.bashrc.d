@@ -27,4 +27,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run plutil linter
         # macOS's plutil on Linux is "plistutil", however, that does not have a `-lint` option
-        run: plutil -lint launchd_agents/**/*.plist
+        run: plutil -lint $GITHUB_WORKSPACE/launchd_agents/**/*.plist
