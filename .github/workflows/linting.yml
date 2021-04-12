@@ -29,4 +29,8 @@ jobs:
         # macOS's plutil on Linux is "plistutil", however, that does not have a `-lint` option
         run: |
           echo ${{ github.workspace }}
-          plutil -lint ${{ github.workspace }}/../launchd_agents/**/*.plist
+          pwd
+          ls -al
+          cd ${{ github.workspace }}
+          ls -al
+          plutil -lint launchd_agents/**/*.plist
