@@ -1,0 +1,29 @@
+name: linting
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  shell_lint:
+    name: Lint shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run shell linter
+        uses: azohra/shell-linter@v0.4.0
+        with:
+          path: "src/*.bashrc, src/**/*.bashrc"
+  launchd_lint:
+    name: Lint launchd agents
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run plutil linter
+        run: plutil -lint launchd_agents/**/*.plist
+      - name: Lint agent's shell executables
+        uses: azohra/shell-linter@v0.4.0
+        with:
+          path: launchd_agents/**/*.sh"
