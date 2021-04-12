@@ -19,7 +19,7 @@ jobs:
       - name: Lint launchd agent scripts
         uses: azohra/shell-linter@v0.4.0
         with:
-          path: "launchd_agents/*.sh"
+          path: "launchd_scripts/*.sh"
   launchd_lint:
     name: Lint launchd agents
     runs-on: macos-latest
