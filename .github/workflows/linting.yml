@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt-get libplist-utils
       - name: Run plutil linter
         # Linux: plistutil, macOS: plutil
         run: plistutil -lint launchd_agents/**/*.plist
