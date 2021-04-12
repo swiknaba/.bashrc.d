@@ -12,21 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run shell linter
+      - name: Lint bash scripts
         uses: azohra/shell-linter@v0.4.0
         with:
           path: "src/*.bashrc, src/**/*.bashrc"
-  launchd_lint:
-    name: Lint launchd agents
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: sudo apt-get install -y libplist-utils
-      - name: Run plutil linter
-        # Linux: plistutil, macOS: plutil
-        run: plutil -lint launchd_agents/**/*.plist
-      - name: Lint agent's shell executables
+      - name: Lint launchd agent scripts
         uses: azohra/shell-linter@v0.4.0
         with:
           path: launchd_agents/**/*.sh"
+  launchd_lint:
+    name: Lint launchd agents
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run plutil linter
+        # macOS's plutil on Linux is "plistutil", however, that does not have a `-lint` option
+        run: plutil -lint launchd_agents/**/*.plist
