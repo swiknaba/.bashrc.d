@@ -27,6 +27,7 @@ export PATH="/usr/local/opt/expat/bin:$PATH"
 export PATH="/usr/local/opt/node@15/bin:$PATH"
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 export PATH="/usr/local/opt/krb5/sbin:$PATH"
+export PATH="/usr/local/opt/heroku-node/bin:$PATH"
 
 # PostgreSQL
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
