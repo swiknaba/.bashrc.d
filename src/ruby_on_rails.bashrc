@@ -13,3 +13,18 @@ alias bers='bundle exec rspec '
 alias becop="bundle exec rubocop "
 # run rubocop on not yet commited files only
 alias becop_new="git add -N . && git diff --name-only | xargs bundle exec rubocop"
+
+function truncatelogs() {
+  declare -a logfiles=("log/development.log"
+                       "log/test.log"
+                       "log/appsignal.log"
+                       "log/scout_apm.log"
+                       ".byebug_history"
+                       )
+  for logfile in "${logfiles[@]}"
+  do
+    if test -f "$logfile"; then
+      cat /dev/null > "$logfile"
+    fi
+  done
+}
