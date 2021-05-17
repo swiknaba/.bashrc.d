@@ -4,7 +4,7 @@
 ## https://github.com/nvm-sh/nvm
 
 # check current LTS version on: https://nodejs.org/en/
-# then set globael default to LTS: nvm alias default v14.16.1
+# then set globael default to LTS: nvm alias default v14.17.0
 
 export NVM_DIR="$HOME/.nvm"
 # shellcheck source=/dev/null

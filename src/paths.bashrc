@@ -27,7 +27,7 @@ export PATH="/usr/local/opt/expat/bin:$PATH"
 export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 export PATH="/usr/local/opt/krb5/sbin:$PATH"
-export PATH="/usr/local/opt/heroku-node/bin:$PATH"
+# export PATH="/usr/local/opt/heroku-node/bin:$PATH" # this causes "node --version" to be v12 instead of the default (v14)
 export PATH="/usr/local/opt/m4/bin:$PATH"
 
 # PostgreSQL
