@@ -10,7 +10,7 @@
 function gitMainBranch() {
   # tr -d '*'            => remove * symbol in case main branch is already checked out
   # awk '{print $1}'     => git branch prints a space in front of branch names, we only want the 2nd part thus
-  git branch | egrep 'master|main' | tr -d '*' | awk '{print $1}'
+  git branch | grep -E 'master|main' | tr -d '*' | awk '{print $1}'
 }
 
 function git_clean1() {
