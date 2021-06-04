@@ -33,9 +33,9 @@ function git_clean_tags() {
 
 ## prepare for work
 function git_clean() {
-  $(git_clean1)
-  $(git_clean2)
-  $(git_clean_tags)
+  git_clean1
+  git_clean2
+  git_clean_tags
 }
 
 
@@ -44,7 +44,7 @@ function git_all(){
   git fetch --all
   git pull --all --ff-only
   git fetch --tags
-  $(git_clean)
+  git_clean
 }
 
 ## frequently used commands
