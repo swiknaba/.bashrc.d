@@ -46,3 +46,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Sites/golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# Python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
