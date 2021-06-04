@@ -12,6 +12,7 @@ function gitMainBranch() {
   # awk '{print $1}'     => git branch prints a space in front of branch names, we only want the 2nd part thus
   git branch | grep -E 'master|main' | tr -d '*' | awk '{print $1}'
 }
+alias gmb=gitMainBranch
 
 function git_clean1() {
   git fetch -p
