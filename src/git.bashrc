@@ -39,7 +39,6 @@ function git_clean() {
   git_clean_tags
 }
 
-
 function git_all(){
   git checkout "$(gitMainBranch)"
   git fetch --all
