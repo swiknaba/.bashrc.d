@@ -50,4 +50,8 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # Python
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if test -f "/usr/local/bin/virtualenvwrapper.sh"; then
+  # avoid linting error because that file is not found in the source code of this repo
+  # shellcheck disable=SC1091
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
