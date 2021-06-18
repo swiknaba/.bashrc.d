@@ -39,23 +39,24 @@ function git_clean() {
   git_clean_tags
 }
 
-function git_all(){
+function git_all() {
   git checkout "$(gitMainBranch)"
   git fetch --all
   git pull --all --ff-only
   git fetch --tags
   git_clean
 }
+alias ga=git_all
 
 ## frequently used commands
 function rebase_master() {
   git pull --rebase origin "$(gitMainBranch)"
 }
 
-alias commit='git add . && git commit -m '
-alias amend='git add . && git commit --amend '
-alias gp='git push '
-
 function reset_file() {
   git checkout origin/"$(gitMainBranch) $1"
 }
+
+alias commit='git add . && git commit -m '
+alias amend='git add . && git commit --amend '
+alias gp='git push '
