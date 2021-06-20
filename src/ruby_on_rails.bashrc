@@ -28,3 +28,4 @@ function truncatelogs() {
     fi
   done
 }
+alias clearlogs=truncatelogs
