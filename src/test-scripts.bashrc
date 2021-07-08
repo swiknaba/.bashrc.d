@@ -28,3 +28,8 @@ else
   networksetup -setsocksfirewallproxystate "$ACTIVE_PORT" on
 fi
 }
+
+
+dbl_vpn () {
+  ssh -N -M -S /tmp/sshtunnel -D 1080 root@3.68.105.221 -p22
+}
