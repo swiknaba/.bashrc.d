@@ -37,6 +37,7 @@ dbl_vpn_start () {
 }
 
 dbl_vpn_stop () {
+  # shellcheck disable=SC2009
   pid="$(ps -eaf | grep "/tmp/sshtunnel" | head -n 1 | awk '{print $2}')"
   kill "$pid"
   dbl_proxy "off"
