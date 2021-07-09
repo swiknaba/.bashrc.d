@@ -30,6 +30,14 @@ fi
 }
 
 
-dbl_vpn () {
-  ssh -N -M -S /tmp/sshtunnel -D 1080 root@3.68.105.221 -p22
+dbl_vpn_start () {
+  PORT=${1:-1080} # first argument or 1080
+  dbl_proxy "$PORT" # enable Proxy in system settings
+  nohup ssh -N -M -S /tmp/sshtunnel -D "$PORT" root@3.68.105.221 -p22 &>/dev/null &
+}
+
+dbl_vpn_stop () {
+  pid="$(ps -eaf | grep "/tmp/sshtunnel" | head -n 1 | awk '{print $2}')"
+  kill "$pid"
+  dbl_proxy "off"
 }
