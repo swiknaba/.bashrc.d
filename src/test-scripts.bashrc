@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # usage pass the last exit code: check_exit_status $? "$dir" "$cmd"
@@ -18,12 +18,12 @@ function check_exit_status() {
 
 function validate() {
   dir="$1"
-  cd "$dir"
+  cd "$dir" || return
   terraform init
   check_exit_status $? "$dir" "terraform init"
   terraform validate
   check_exit_status $? "$dir" "terraform validate"
-  cd ../
+  cd "../"
 }
 
 
@@ -35,6 +35,7 @@ do
     echo "$dir"
   fi
 done
+
 
 
 
