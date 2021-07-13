@@ -25,7 +25,7 @@ function validate() {
   check_exit_status $? "$dir" "terraform init"
   terraform validate
   check_exit_status $? "$dir" "terraform validate"
-  cd "$TEST_DIR" || exit 1
+  cd "$TEST_DIR" || { echo "Something went terrible wrong"; exit 1; }
 }
 
 # run validation on all terraform modules
