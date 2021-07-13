@@ -1,6 +1,8 @@
 #!/bin/bash
 
-#
+TEST_DIR="$(pwd)"
+declare -a ERRORS=() # initialize empty array
+
 # usage pass the last exit code: check_exit_status $? "$dir" "$cmd"
 # will exit with code 1 on error
 function check_exit_status() {
@@ -11,11 +13,11 @@ function check_exit_status() {
   then
     echo "✅  success: $cmd $dir"
   else
-    echo "⚠️  failed: $cmd $dir"
-    exit 1
+    ERRORS+=("⚠️  failed: $cmd $dir")
   fi
 }
 
+# jump into module folder, validate terraform, jump back to test folder
 function validate() {
   dir="$1"
   cd "$dir" || return
@@ -23,18 +25,32 @@ function validate() {
   check_exit_status $? "$dir" "terraform init"
   terraform validate
   check_exit_status $? "$dir" "terraform validate"
-  cd "../"
+  cd "$TEST_DIR"
 }
 
-
-shopt -s globstar nullglob
-for dir in ./*/
+# run validation on all terraform modules
+for dir in ../*/
 do
-  if [[ "$dir" != *"terraform-tests"* && -d "$dir" ]]
+  if [[ -d "$dir" && "$dir" != *"terraform-tests"* ]]
   then
-    echo "$dir"
+    validate "$dir"
   fi
 done
+
+# print all errors
+for error in "${ERRORS[@]}"
+do
+  echo "$error"
+done
+
+# fail if there are any errors
+if [[ "${#ERRORS[@]}" != 0 ]]
+then
+  exit 1
+else
+  exit 0
+fi
+
 
 
 
