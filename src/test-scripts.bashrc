@@ -27,7 +27,7 @@ function validate() {
 }
 
 
-# shopt -s globstar nullglob
+shopt -s globstar nullglob
 for dir in ./*/
 do
   if [[ "$dir" != *"terraform-tests"* && -d "$dir" ]]
