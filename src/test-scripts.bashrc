@@ -7,7 +7,10 @@
 
 dbl_proxy () {
 # e.g. "en0"
-ACTIVE_DEVICE="$(ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active' | grep -E -o -m 1 '^[^\t:]+')"
+# This grabs the first active device, which might not be the correct one
+# ACTIVE_DEVICE="$(ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active' | grep -E -o -m 1 '^[^\t:]+')"
+
+ACTIVE_DEVICE="en0"
 
 # e.g. "Ethernet"
 ACTIVE_PORT="$(networksetup -listnetworkserviceorder | grep "$ACTIVE_DEVICE" | sed -n "s/^.*Port:\s*\(.*\),.*$/\1/p" | xargs)"
@@ -38,7 +41,8 @@ dbl_vpn_start () {
 
 dbl_vpn_stop () {
   # shellcheck disable=SC2009
-  pid="$(ps -eaf | grep "/tmp/sshtunnel" | head -n 1 | awk '{print $2}')"
-  kill "$pid"
+  # matching grep with a regex prevents also matching the grep command itself (due to ps)
+  PID="$(ps -eaf | grep "[/]tmp/sshtunnel" | awk '{print $2}')"
+  kill "$PID"
   dbl_proxy "off"
 }

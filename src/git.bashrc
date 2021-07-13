@@ -54,7 +54,7 @@ function rebase_master() {
 }
 
 function reset_file() {
-  git checkout origin/"$(gitMainBranch) $1"
+  git checkout origin/"$(gitMainBranch)" "$1"
 }
 
 alias commit='git add . && git commit -m '
