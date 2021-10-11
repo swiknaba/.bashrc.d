@@ -29,6 +29,8 @@ launchd_agent_install () {
     rm "$HOME/Library/LaunchAgents/$AGENT_NAME.plist"
     # copy launch agent from bashrc.d directoy
     cp "$HOME/.bashrc.d/launchd_agents/$AGENT_NAME.plist" "${HOME}/Library/LaunchAgents/${AGENT_NAME}.plist"
+    # write the correct user name to the file (we can't evaluate `whoami` or use `~` inside the plist file)
+    sed -i '' "s|Users/ry/.bashrc.d|Users/$(whoami)/.bashrc.d|g" "${HOME}/Library/LaunchAgents/${AGENT_NAME}.plist"
     # give correct ownershipt to script
     eval "$(sudo chown root:wheel ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
     # give correct permissions to script
