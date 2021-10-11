@@ -1,0 +1,12 @@
+/log/*
+/tmp/*
+/tmp/**/*
+
+# OS
+.env
+/.idea
+.DS_Store
+
+# private files
+src/projects/*
+!src/projects/README.md
