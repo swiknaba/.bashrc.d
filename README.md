@@ -1,6 +1,6 @@
 # An Organized Bash Profile
 
-![Shell Lint](https://github.com/swiknaba/.bashrc.d/workflows/ShellLint/badge.svg)
+[![linting](https://github.com/swiknaba/.bashrc.d/actions/workflows/linting.yml/badge.svg)](https://github.com/swiknaba/.bashrc.d/actions/workflows/linting.yml)
 
 ## Idea & High level overview
 https://dev.to/swiknaba/how-to-organize-your-bash-profile-20eb
