@@ -7,7 +7,7 @@
 update_bash_profile () {
   cd ~/.bashrc.d/ || return
 
-  git checkout master
+  git checkout main
   git fetch --all
   git pull --all --ff-only
 }
