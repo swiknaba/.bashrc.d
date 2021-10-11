@@ -34,7 +34,7 @@ launchd_agent_install () {
     # give correct ownershipt to script
     eval "$(sudo chown root:wheel ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
     # give correct permissions to script
-    eval "$(chmod a+x ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
+    eval "$(sudo chmod a+x ~/.bashrc.d/launchd_scripts/"${AGENT_NAME}".sh)"
     # (re)start the new agent
     if launchctl list | grep "$AGENT_NAME" > /dev/null
     then
