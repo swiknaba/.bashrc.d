@@ -1,0 +1,30 @@
+name: linting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  shell_lint:
+    name: Lint shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint bash scripts
+        uses: azohra/shell-linter@v0.4.0
+        with:
+          path: "src/*.bashrc, src/**/*.bashrc"
+      - name: Lint launchd agent scripts
+        uses: azohra/shell-linter@v0.4.0
+        with:
+          path: "launchd_scripts/*.sh"
+  launchd_lint:
+    name: Lint launchd agents
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run plutil linter
+        # macOS's plutil on Linux is "plistutil", however, that does not have a `-lint` option
+        run: plutil -lint launchd_agents/*.plist
