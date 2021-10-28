@@ -32,3 +32,6 @@ function truncatelogs() {
   done
 }
 alias clearlogs=truncatelogs
+
+
+export DISABLE_SPRING=1
