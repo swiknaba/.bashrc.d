@@ -33,5 +33,5 @@ function truncatelogs() {
 }
 alias clearlogs=truncatelogs
 
-
+# aweful for debugging locally
 export DISABLE_SPRING=1
