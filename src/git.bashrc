@@ -78,31 +78,30 @@ function reset_file() {
 }
 
 #
-# Same as `git diff`, but prints out files that are not git-tracked.
-# If any arguments are given, this falls back to vanilla `git diff`,
-# passing all arguments through to the original command.
-# This helps to avoid hastily commiting untracked files that I forgot
-# are still there (e.g. gitignored on a different branch, switched branches
-# and forgot about those files).
+# Same as `git diff`, but prints out files that are not git-tracked
+# as well. This helps to avoid hastily commiting untracked files
+# that I forgot are still there (e.g. gitignored on a different
+# branch, switched branches and forgot about those files).
 #
 function git_diff_with_untracked() {
-  # "$#" returns the number of passed arguments
-  if [ $# -eq 0 ]
+  git diff "$@" # we always want to show the git diff
+
+  FILES=$(git ls-files --others --exclude-standard)
+
+  # "FILES" is a blank string if there are no git changes or no new files
+  # and `--no-index` option without a path ends in an error
+  if [[ -z "$FILES" ]]
   then
-    for file in "$(git ls-files --others --exclude-standard)"
-    do
-      # "file" is a blank string if there are no git changes or no new files
-      # and `--no-index` option without a path ends in an error
-      if [[ -z "$file" ]]
-      then
-        git diff "$@"
-      else
-        git --no-pager diff --no-index /dev/null $file
-      fi
-    done
+    return
   else
-    git diff "$@"
+    # \033[1m => bold, \033[0m => reset
+    echo -e "\n\n \033[1muntracked files:\033[0m\n"
   fi
+
+  for file in $FILES
+  do
+    git --no-pager diff --no-index /dev/null "$file"
+  done
 }
 alias gd='git_diff_with_untracked'
 
