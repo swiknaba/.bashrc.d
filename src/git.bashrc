@@ -93,11 +93,10 @@ function git_diff_with_untracked() {
   if [[ -z "$FILES" ]]
   then
     return
-  else
-    # \033[1m => bold, \033[0m => reset
-    echo -e "\n\n \033[1muntracked files:\033[0m\n"
   fi
 
+  # \033[1m => bold, \033[0m => reset
+  echo -e "\n\n \033[1muntracked files:\033[0m\n"
   for file in $FILES
   do
     git --no-pager diff --no-index /dev/null "$file"
