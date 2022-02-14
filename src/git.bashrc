@@ -77,6 +77,35 @@ function reset_file() {
   git checkout origin/"$(gitMainBranch)" "$1"
 }
 
+#
+# Same as `git diff`, but prints out files that are not git-tracked.
+# If any arguments are given, this falls back to vanilla `git diff`,
+# passing all arguments through to the original command.
+# This helps to avoid hastily commiting untracked files that I forgot
+# are still there (e.g. gitignored on a different branch, switched branches
+# and forgot about those files).
+#
+function git_diff_with_untracked() {
+  # "$#" returns the number of passed arguments
+  if [ $# -eq 0 ]
+  then
+    for file in "$(git ls-files --others --exclude-standard)"
+    do
+      # "file" is a blank string if there are no git changes or no new files
+      # and `--no-index` option without a path ends in an error
+      if [[ -z "$file" ]]
+      then
+        git diff "$@"
+      else
+        git --no-pager diff --no-index /dev/null $file
+      fi
+    done
+  else
+    git diff "$@"
+  fi
+}
+alias gd='git_diff_with_untracked'
+
 alias commit='git add . && git commit -m '
 alias amend='git add . && git commit --amend '
 alias gp='git push '
