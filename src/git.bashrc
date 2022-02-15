@@ -38,7 +38,7 @@ function git_clean2() {
   git fetch -p
   for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}')
   do
-    if [[ ! -z "$branch" ]]
+    if [[ -n "$branch" ]]
     then
       git branch -D "$branch"
     fi
