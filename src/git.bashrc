@@ -89,20 +89,20 @@ function reset_file() {
 function git_diff_with_untracked() {
   git diff "$@" # we always want to show the git diff
 
-  FILES=$(git ls-files --others --exclude-standard)
+  UNTRACKED_FILES=$(git ls-files --others --exclude-standard)
 
-  # "FILES" is a blank string if there are no git changes or no new files
+  # "UNTRACKED_FILES" is a blank string if there are no git changes or no new files
   # and `--no-index` option without a path ends in an error
-  if [[ -z "$FILES" ]]
+  if [[ -z "$UNTRACKED_FILES" ]]
   then
     return
   fi
 
   # \033[1m => bold, \033[0m => reset
   echo -e "\n\n \033[1muntracked files:\033[0m\n"
-  for file in $FILES
+  for untracked_file in $UNTRACKED_FILES
   do
-    git --no-pager diff --no-index /dev/null "$file"
+    git --no-pager diff --no-index /dev/null "$untracked_file"
   done
 }
 alias gd='git_diff_with_untracked'
