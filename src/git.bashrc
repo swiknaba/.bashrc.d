@@ -107,10 +107,31 @@ function git_diff_with_untracked() {
 }
 alias gd='git_diff_with_untracked'
 
-alias commit='git add . && git commit -m '
+function commit() {
+  git add .
+  git commit -m "$@"
+  echo $(git rev-parse HEAD)
+}
+
 alias amend='git add . && git commit --amend '
 alias gp='git push '
 alias gco='git checkout '
 alias gb='git branch '
 alias commit_hash='git rev-parse HEAD '
 alias ch='git rev-parse HEAD '
+
+
+# @TOOD: add some more magic
+# git-wip() {
+#   git commit -m "[WIP] $(printf '%s ' "$@")"
+# }
+
+# git-finish() {
+#   git commit -m "[Finishes] $(printf '%s ' "$@")"
+# }
+
+# git-commit-memo() {
+#   git commit -m "[Chore] $(printf '%s ' "$@")"
+# }
+# alias gcchore='git-commit-memo' # from functions.zsh
+# alias gcwip='git-wip' # from functions.zsh

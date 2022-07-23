@@ -11,3 +11,5 @@ update_bash_profile () {
   git fetch --all
   git pull --all --ff-only
 }
+
+alias sites="cd ~/Sites"
