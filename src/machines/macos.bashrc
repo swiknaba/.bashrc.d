@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #
 # stuff I want to run on any machine that runs macOS
 #
