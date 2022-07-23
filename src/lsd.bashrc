@@ -5,4 +5,5 @@
 # if you want to be able to use those fonts in the terminal of an IDE or Editor, you need to download
 # the TTF files and install them on your system through the system font manager. Then you can configure
 # the font in your IDE or Editor.
+# For icon support, remeber to actually change the font in the terminal.
 alias ls='lsd'
