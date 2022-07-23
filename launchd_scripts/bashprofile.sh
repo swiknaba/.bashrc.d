@@ -8,7 +8,7 @@
 if command -v git > /dev/null
 then
   cd ~/.bashrc.d/ || exit
-  git checkout main
+  git checkout arm64
   git fetch --all
   git pull --all --ff-only
 fi

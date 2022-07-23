@@ -9,7 +9,7 @@
 update_bash_profile () {
   cd ~/.bashrc.d/ || return
 
-  git checkout main
+  git checkout arm64
   git fetch --all
   git pull --all --ff-only
 }
