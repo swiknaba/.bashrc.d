@@ -9,7 +9,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export EDITOR=nano
 VISUAL="$EDITOR"
 export VISUAL
-export BUNDLER_EDITOR=atom
+# export BUNDLER_EDITOR=code
 
 # ignore consecutive duplicates when running `history` in bash
 # UPDATE: it seems this doesn't work on macOS anymore (since Mojave?)
