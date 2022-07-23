@@ -33,25 +33,5 @@ export PATH="/usr/local/opt/m4/bin:$PATH"
 # PostgreSQL
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
-# Ruby & Rails
-export PATH="$HOME/.rbenv/bin:$PATH"
-
 # JavaScript
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Golang
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/Sites/golang
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# Python
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-if test -f "/usr/local/bin/virtualenvwrapper.sh"; then
-  # avoid linting error because that file is not found in the source code of this repo
-  # shellcheck disable=SC1091
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
