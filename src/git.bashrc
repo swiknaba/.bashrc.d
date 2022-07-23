@@ -110,7 +110,7 @@ alias gd='git_diff_with_untracked'
 function commit() {
   git add .
   git commit -m "$@"
-  commit_hash
+  echo commit_hash
 }
 
 alias amend='git add . && git commit --amend '
