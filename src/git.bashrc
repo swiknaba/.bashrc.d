@@ -110,7 +110,7 @@ alias gd='git_diff_with_untracked'
 function commit() {
   git add .
   git commit -m "$@"
-  commit_hash
+  echo "$(git rev-parse HEAD)" # shellcheck disable=SC2005
 }
 
 alias amend='git add . && git commit --amend '
