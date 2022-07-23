@@ -13,3 +13,9 @@ update_bash_profile () {
 }
 
 alias sites="cd ~/Sites"
+
+# adds an invisible spacer to the dock
+dock_spacer () {
+  defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
+  killall Dock
+}
